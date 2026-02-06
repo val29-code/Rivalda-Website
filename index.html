@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="id" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rivalda Mustika Setiawan - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    body { box-sizing: border-box; font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
+    * { scroll-behavior: smooth; }
+    .font-heading { font-family: 'Playfair Display', serif; letter-spacing: -0.02em; }
+    
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes gradientMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
+
+    .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.4); }
+    
+    /* GRADASI BACKGROUND BARU */
+    .gradient-bg { 
+        background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #eef2ff, #faf5ff); 
+        background-size: 400% 400%; 
+        animation: gradientMove 12s ease infinite; 
+    }
+
+    .skill-bar { background: linear-gradient(90deg, #0ea5e9, #6366f1); border-radius: 9999px; height: 100%; transition: width 1.5s ease-in-out; }
+    .nav-link { position: relative; font-weight: 600; color: #1e40af; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #0ea5e9, #6366f1); transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    
+    .card-hover { transition: all 0.3s ease; border: 1px solid transparent; }
+    .card-hover:hover { 
+        transform: translateY(-8px); 
+        box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.2); 
+        border-color: rgba(99, 102, 241, 0.2);
+    }
+
+    .img-container { width: 100%; aspect-ratio: 1/1; border-radius: 20px; overflow: hidden; background: #f0f9ff; }
+    .img-container img { width: 100%; height: 100%; object-fit: cover; }
+    .img-portrait { aspect-ratio: 3/4 !important; }
+
+    .img-mini { width: 80px; height: 80px; flex-shrink: 0; border-radius: 12px; overflow: hidden; }
+    .img-mini img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+ </head>
+ <body class="h-full text-slate-800">
+  <div id="app-wrapper" class="w-full h-full overflow-auto gradient-bg relative">
+   
+   <header class="fixed top-0 left-0 right-0 z-50 glass-card shadow-sm border-b border-white/20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+     <div class="flex items-center gap-2"><span class="font-heading text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-indigo-600 italic tracking-tighter">Rivalda.</span></div>
+     <nav class="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[0.2em]">
+       <a href="#home" class="nav-link text-indigo-900">Home</a>
+       <a href="#about" class="nav-link text-indigo-900">About</a>
+       <a href="#skills" class="nav-link text-indigo-900">Skills</a>
+       <a href="#experience" class="nav-link text-indigo-900">Experience</a>
+       <a href="#contact" class="nav-link text-indigo-900">Hubungi</a>
+     </nav>
+    </div>
+   </header>
+
+   <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+     <div class="animate-fadeInUp" style="opacity:0">
+      <div class="w-72 h-72 md:w-96 md:h-96 rounded-[3rem] bg-white p-4 shadow-2xl animate-float border-2 border-indigo-50">
+        <img src="https://lh3.googleusercontent.com/u/0/d/1mUsOjL_9cQwtZiVUR_kALctAAtDBjdDO" alt="Rivalda" class="w-full h-full object-cover rounded-[2.5rem]">
+      </div>
+     </div>
+     <div class="text-center md:text-left">
+      <h1 class="font-heading text-5xl md:text-7xl text-slate-900 leading-tight mb-4">A Personal <br>Journey✨</h1>
+      <p class="text-xl text-indigo-400 font-medium">Rivalda Mustika Setiawan</p>
+     </div>
+    </div>
+   </section>
+
+   <section id="about" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="glass-card p-10 md:p-16 rounded-[3rem] shadow-xl text-center border border-white/50">
+        <h2 class="font-heading text-4xl text-slate-900 mb-8">Tentang Saya</h2>
+        <p class="text-slate-600 text-lg leading-relaxed mb-12">Halo semuanya! 👋<br>Saya Rivalda Mustika Setiawan, siswa SMA kelas 12. Dalam keseharian, saya berusaha menjalani peran sebagai pelajar yang bertanggung jawab dalam menyelesaikan tugas sekolah dan aktivitas sehari-hari. Fokus utama saya adalah belajar di kelas dan menyelesaikan kewajiban akademik dengan sebaik mungkin.
+</p>
+        <div class="grid md:grid-cols-2 gap-10 text-left border-t border-indigo-50 pt-10">
+          <div>
+            <h3 class="font-bold text-indigo-600 text-xs uppercase tracking-widest mb-4">Pendidikan</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-center gap-3">🎓 <span class="hover:text-indigo-600 transition-colors">SMAN 1 Subang</span></li>
+              <li class="flex items-center gap-3">🎓 <span class="opacity-80">SMPN 1 Subang</span></li>
+              <li class="flex items-center gap-3">🎓 <span class="opacity-60">SDIT Alamy</span></li>
+              <li class="flex items-center gap-3">🎓 <span class="opacity-40">TKIT Al-Furqan</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-indigo-600 text-xs uppercase tracking-widest mb-4">Core Values</h3>
+            <p class="text-slate-500 leading-relaxed italic border-l-4 border-indigo-200 pl-4">"Responsibility, consistency, and a commitment to continuous growth."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <section id="skills" class="py-24 px-6 bg-white/20">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="font-heading text-3xl text-slate-900 mb-16">Keahlian</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="glass-card p-10 rounded-3xl text-left shadow-lg">
+          <h3 class="font-heading text-2xl text-indigo-800 mb-8 font-bold italic">Hard Skills</h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2 text-[10px] font-bold text-indigo-900 uppercase tracking-tighter"><span>Kemampuan Numerik</span><span>80%</span></div>
+              <div class="h-2 bg-indigo-50 rounded-full overflow-hidden"><div class="skill-bar" style="width: 80%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2 text-[10px] font-bold text-indigo-900 uppercase tracking-tighter"><span>Berbicara Bahasa Inggris</span><span>70%</span></div>
+              <div class="h-2 bg-indigo-50 rounded-full overflow-hidden"><div class="skill-bar" style="width: 70%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="glass-card p-10 rounded-3xl text-left shadow-lg">
+          <h3 class="font-heading text-2xl text-indigo-800 mb-8 font-bold italic">Soft Skills</h3>
+          <div class="grid grid-cols-2 gap-4 text-slate-700">
+            <div class="p-4 bg-white/60 border border-indigo-50 rounded-xl text-center font-bold text-[10px] uppercase hover:bg-indigo-500 hover:text-white transition-all cursor-default shadow-sm tracking-tighter">Kepemimpinan</div>
+            <div class="p-4 bg-white/60 border border-indigo-50 rounded-xl text-center font-bold text-[10px] uppercase hover:bg-indigo-500 hover:text-white transition-all cursor-default shadow-sm tracking-tighter">Kerja Tim</div>
+            <div class="p-4 bg-white/60 border border-indigo-50 rounded-xl text-center font-bold text-[10px] uppercase hover:bg-indigo-500 hover:text-white transition-all cursor-default shadow-sm tracking-tighter">Adaptasi</div>
+            <div class="p-4 bg-white/60 border border-indigo-50 rounded-xl text-center font-bold text-[10px] uppercase hover:bg-indigo-500 hover:text-white transition-all cursor-default shadow-sm tracking-tighter">Tanggung Jawab</div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <section id="experience" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16">
+        <div class="space-y-10">
+          <h2 class="font-heading text-3xl text-slate-900 flex items-center gap-4"><span>🎯</span> Organisasi</h2>
+          
+          <div class="glass-card p-6 rounded-2xl card-hover">
+            <div class="img-container img-portrait mb-6">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1JKVhLYOvAGIGE4fi5tWznrIA8e3mvXoS" alt="P5">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900">PIC P5</h4>
+            <p class="text-indigo-500 font-bold text-xs uppercase tracking-widest mt-1">Tahun 2025</p>
+			<p class="text-slate-600 text-sm mt-2 leading-relaxed">Bertanggung jawab sebagai person-in-charge untuk Projek Penguatan Profil Pelajar Pancasila.</p>
+          </div>
+
+		  <div class="glass-card p-6 rounded-2xl card-hover">
+            <div class="img-container img-portrait mb-6">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1GSLMgWcnMyumoPpnYnLils_oX3CnjqnC" alt="OSIS">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900">Ketua Divisi Komunikasi Lisan</h4>
+            <p class="text-indigo-500 font-bold text-xs uppercase tracking-widest mt-1">2024-2025</p>
+			<p class="text-slate-600 text-sm mt-2 leading-relaxed text-balance text-justify">Bertanggung jawab mengatur dan memproduksi podcast di Spotify untuk membangun platform komunikasi yang menarik.</p>
+          </div>
+
+		  <div class="glass-card p-6 rounded-2xl card-hover">
+            <div class="img-container img-portrait mb-6">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1BbxGlmL_CiB4wSiVUVgv3uOVy16d0Pxh" alt="SPENSA">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900">Ketua SPENSA English Club</h4>
+            <p class="text-indigo-500 font-bold text-xs uppercase tracking-widest mt-1">2022-2023</p>
+			<p class="text-slate-600 text-sm mt-2 leading-relaxed">Bertanggung jawab mengawasi kegiatan ekstrakurikuler di bawah bimbingan guru.</p>
+          </div>
+		  
+		  <div class="glass-card p-6 rounded-2x1 card-hover">
+            <h4 class="font-bold text-xl text-sky-950">Anggota OSIS Sekbid 10</h4
+            <p class="text-sky-500 font-bold text-xs uppercase tracking-widest mt-1">2021 - 2022</p>
+            <p class="text-slate-600 text-sm">Bertanggung jawab di Bidang Bahasa Inggris.</p>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <h2 class="font-heading text-3xl text-slate-900 flex items-center gap-4"><span>📜</span> Prestasi</h2>
+          <div class="glass-card p-5 rounded-2xl flex items-center gap-6 card-hover border-l-8 border-sky-400">
+            <div class="img-mini">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1RjIvvSvzUEIMAt4fRX8oqF4af4IORgFH" alt="UPI">
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Peserta CTM GMM UPI</h4>
+              <p class="text-indigo-500 text-[10px] font-bold uppercase tracking-widest">2025</p>
+            </div>
+          </div>
+          <div class="glass-card p-5 rounded-2xl flex items-center gap-6 card-hover border-l-8 border-indigo-400">
+            <div class="img-mini">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1KvkSFYBqeS0GFOi3HkLPgvqMqnsvEIH2" alt="OSNK Fisika">
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Peserta OSNK Fisika</h4>
+              <p class="text-indigo-500 text-[10px] font-bold uppercase tracking-widest">2024 & 2025</p>
+            </div>
+          </div>
+		  <div class="glass-card p-5 rounded-2xl flex items-center gap-6 card-hover border-l-8 border-blue-400">
+            <div class="img-mini">
+              <img src="https://lh3.googleusercontent.com/u/0/d/1Q7KpGKP08geECmu9uvpsqGmqfivdd0CM" alt="Cerdas Cermat">
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-900 text-sm">Juara 3 Cerdas Cermat Museum</h4>
+              <p class="text-indigo-500 text-[10px] font-bold uppercase tracking-widest">2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <section id="contact" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto glass-card p-12 rounded-[3rem] shadow-2xl flex flex-col md:flex-row items-center gap-12 border border-white/40">
+      <div class="md:w-1/2 text-center md:text-left">
+        <h2 class="font-heading text-4xl text-slate-900 italic mb-4 text-balance text-justify">Hubungi Saya 🤗</h2>
+        <p class="text-slate-600 font-medium mb-8">Punya pertanyaan atau ingin berkolaborasi?</p>
+        <div class="bg-indigo-50/50 p-4 rounded-2xl inline-block border border-indigo-100">
+          <p class="text-indigo-900 font-bold">valdarivalda29@gmail.com</p>
+        </div>
+      </div>
+      <form class="md:w-1/2 w-full space-y-4">
+        <input type="text" placeholder="Nama Anda" class="w-full p-4 rounded-2xl bg-white/80 border-none ring-1 ring-indigo-100 focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
+        <textarea placeholder="Pesan" rows="3" class="w-full p-4 rounded-2xl bg-white/80 border-none ring-1 ring-indigo-100 focus:ring-2 focus:ring-indigo-400 outline-none transition-all"></textarea>
+        <button class="w-full py-4 bg-gradient-to-r from-sky-600 to-indigo-600 text-white font-bold rounded-2xl hover:opacity-90 shadow-lg transition-all uppercase tracking-widest text-[10px]">Kirim Pesan</button>
+      </form>
+    </div>
+   </section>
+
+   <footer class="py-16 text-center text-indigo-300 text-[10px] font-bold uppercase tracking-[0.3em]">
+     © 2026 – Rivalda Mustika Setiawan – Subang, Indonesia
+   </footer>
+
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('animate-fadeInUp'); entry.target.style.opacity = "1"; } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.glass-card, .animate-fadeInUp').forEach(el => { el.style.opacity = "0"; observer.observe(el); });
+  </script>
+ </body>
+</html>
